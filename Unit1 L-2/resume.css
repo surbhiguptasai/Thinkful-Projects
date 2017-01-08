@@ -1,0 +1,40 @@
+header{
+	text-align: center;
+	font-size: 20px;
+	color: green;
+
+}
+address{
+	text-align: center;
+	align-content: center;
+}
+.Contact{
+		font-size: 15px;
+		text-align: center;
+		color: blue;
+
+	}
+h2,h3{
+		text-align: center;
+		font-size: 25px;
+		text-underline-position: unset;
+	}
+hr{
+	border-color: red;
+	width: 90%;
+}
+.edu{
+	text-align: center;
+	padding-left: 200px;
+    white-space: nowrap; 
+    width: 85px; 
+    text-overflow: ellipsis;
+}
+
+section.emphistory {
+	text-align: center;
+	padding-left: 200px;
+    white-space: nowrap; 
+    width: 85px; 
+    text-overflow: ellipsis;
+}

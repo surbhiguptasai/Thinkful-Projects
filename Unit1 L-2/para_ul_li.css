@@ -1,0 +1,14 @@
+.paragraph {
+  max-width: 400px;
+  margin-bottom: 15px;
+}
+
+.unordered-list {
+  padding-left: 15px;
+}
+
+.list-item:before{
+ 
+  list-style:square;
+  margin-right: 5px;
+  }
