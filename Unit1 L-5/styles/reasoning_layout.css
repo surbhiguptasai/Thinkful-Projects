@@ -1,0 +1,94 @@
+.container {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+nav {
+  height: 60px;
+  background-color: lightblue;
+  position: absolute;
+  width: 100%;
+}
+nav .icon-img {
+  height: 50px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid black;
+}
+
+nav ul {
+  display: inline-block;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav li::after {
+  content: "|";
+  margin-left: 5px;
+}
+
+nav a:hover {
+  color: black;
+}
+.tabmenu{
+    list-style-type: none;
+    white-space: nowrap;
+    display: inline-block;
+    margin-top: 5px;
+    vertical-align: bottom;
+  }
+  .tabmenu li {
+    display: inline;
+    font-weight: bold;
+    margin: 0px 3px;
+}
+.selected, .choice.primary {
+    font-weight: bold;
+}
+.tabmenu li.selected a {
+    color: orangered;
+    background-color: white;
+    border: 1px solid #5f99cf;
+    border-bottom: 1px solid white;
+    z-index: 100;
+}
+.tabmenu li a {
+    padding: 2px 6px 0 6px;
+    background-color: #eff7ff;
+}
+ #header-bottom-right {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    background-color: #EFF7FF;
+    padding: 4px;
+    line-height: 12px;
+    border-top-left-radius: 7px;
+}
+.user {
+    color: gray;
+}
+.separator {
+    color: gray;
+    margin: 0px .7ex 0px .7ex;
+    cursor: default;
+}
+.flat-list {
+    list-style-type: none;
+    display: inline;
+}
+.flat-list li, .flat-list form {
+    display: inline;
+    white-space: nowrap;
+}
+.pref-lang {
+    font-weight: bold;
+}
+div {
+    display: block;
+    margin:0;
+}
