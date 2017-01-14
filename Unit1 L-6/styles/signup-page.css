@@ -1,0 +1,69 @@
+body{
+	background-color: #68A8F0;
+}
+.imgcontainer{
+	margin-top: 40px;
+	text-align: center;
+}
+
+img{
+	height: 35px;
+}
+.already-account,a{
+	text-align: center;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+form {
+    border: 3px solid #f1f1f1;
+    width: 400px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    margin-left: 35%;
+    margin-right:25%;
+    background-color: white;
+}
+
+input[type=email], input[type=password] {
+    width: 320px;
+    padding: 15px ;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    height: 55px;
+
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    margin: 8px 0;
+    border: 2px;
+    cursor: pointer;
+    width: 320px;
+   height: 55px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container {
+    padding: 16px;
+    text-align: left;
+}
+
+
+
+
+ .pwdcolor{
+      
+      text-align: center;
+      color: black;
+    
+    }
+    .psw{margin-bottom: 10px;}
+
