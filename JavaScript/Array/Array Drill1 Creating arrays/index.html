@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<script id="jsbin-javascript">
+function makeList(item1, item2, item3) {
+  // your code here
+}
+
+
+
+/* From here down, you are not expected to 
+   understand.... for now :)  
+   
+   
+   Nothing to see here!
+   
+*/
+
+
+// tests
+
+function testMakeList() {
+  
+  var items = ["prime rib", "fried goat cheese salad", "fish tacos"];
+  var result = makeList(items[0], items[1], items[2]);
+  
+  if (
+    result && result.length && items.length === result.length &&
+    items.every(function(item) {
+      return result.indexOf(item) > -1;
+    })) {
+    console.log('SUCCESS: `makeList` works!');
+  } else {
+    console.error('FAILURE: `makeList` is not working');
+  } 
+}
+
+testMakeList();
+</script>
+
+
+
+<script id="jsbin-source-javascript" type="text/javascript">function makeList(item1, item2, item3) {
+  // your code here
+}
+
+
+
+/* From here down, you are not expected to 
+   understand.... for now :)  
+   
+   
+   Nothing to see here!
+   
+*/
+
+
+// tests
+
+function testMakeList() {
+  
+  var items = ["prime rib", "fried goat cheese salad", "fish tacos"];
+  var result = makeList(items[0], items[1], items[2]);
+  
+  if (
+    result && result.length && items.length === result.length &&
+    items.every(function(item) {
+      return result.indexOf(item) > -1;
+    })) {
+    console.log('SUCCESS: `makeList` works!');
+  } else {
+    console.error('FAILURE: `makeList` is not working');
+  } 
+}
+
+testMakeList();</script></body>
+</html>
