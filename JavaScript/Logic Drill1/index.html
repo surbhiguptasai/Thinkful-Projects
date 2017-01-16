@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+* {
+  box-sizing: border-box;
+}
+
+main {
+  padding: 50px 20px;
+}
+
+.traffic-light-box {
+  width: 100px;
+  border: 4px solid orange;
+  border-radius: 15%;
+  padding: 7px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.traffic-light {
+  margin: 0 auto;
+  height: 80px;
+  width: 80px;
+  border: 1px black solid;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.red-light {
+  border-color: red;
+}
+
+.yellow-light {
+  border-color: yellow;
+}
+
+.green-light {
+  border-color: green;
+}
+
+
+.red-on {
+  background-color: red; 
+}
+
+.yellow-on {
+  background-color: yellow;
+}
+
+.green-on {
+  background-color: green;
+}
+
+.controls {
+  text-align: center;
+}
+</style>
+</head>
+<body>
+  <main>
+  <div class="traffic-light-box">
+    <div class="traffic-light red-light"></div>
+    <div class="traffic-light yellow-light"></div>
+    <div class="traffic-light green-light"></div>
+  </div>
+  <div class="controls">
+    <button class="js-control-lights">click me</button>
+  </div>
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+</main>
+<script id="jsbin-javascript">
+function doTrafficLights() {
+  var activeLight = getActiveLight();
+  // your code will replace this call
+  // to `console.log()`
+    if (activeLight === 'red') {
+     turnRed();
+  }
+  else if (activeLight === 'green') {
+     turnGreen();
+  }
+  else {
+    turnYellow();
+  }
+  
+  
+
+
+}
+
+
+/* From here down, you are not expected to 
+   understand.... for now :)  
+   
+   
+   Nothing to see here!
+   
+*/
+
+
+function turnOffLights() {
+  $('.traffic-light').removeClass('yellow-on red-on green-on');
+}
+
+function turnGreen() {
+  turnOffLights();
+  $('.green-light').addClass('green-on');
+}
+
+function turnYellow() {
+  turnOffLights();
+  $('.yellow-light').addClass('yellow-on');
+}
+
+function turnRed() {
+  turnOffLights();
+  $('.red-light').addClass('red-on');
+}
+
+function getActiveLight() {
+  return (['red', 'green', 'yellow'])[Math.floor(Math.random() * 3)];
+}
+
+function handleClicks() {
+  $('.js-control-lights').click(function() {
+    doTrafficLights();
+  });
+}
+
+$(function() {
+  handleClicks();
+})
+</script>
+
+
+<script id="jsbin-source-css" type="text/css">* {
+  box-sizing: border-box;
+}
+
+main {
+  padding: 50px 20px;
+}
+
+.traffic-light-box {
+  width: 100px;
+  border: 4px solid orange;
+  border-radius: 15%;
+  padding: 7px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.traffic-light {
+  margin: 0 auto;
+  height: 80px;
+  width: 80px;
+  border: 1px black solid;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.red-light {
+  border-color: red;
+}
+
+.yellow-light {
+  border-color: yellow;
+}
+
+.green-light {
+  border-color: green;
+}
+
+
+.red-on {
+  background-color: red; 
+}
+
+.yellow-on {
+  background-color: yellow;
+}
+
+.green-on {
+  background-color: green;
+}
+
+.controls {
+  text-align: center;
+}</script>
+
+<script id="jsbin-source-javascript" type="text/javascript">function doTrafficLights() {
+  var activeLight = getActiveLight();
+  // your code will replace this call
+  // to `console.log()`
+    if (activeLight === 'red') {
+     turnRed();
+  }
+  else if (activeLight === 'green') {
+     turnGreen();
+  }
+  else {
+    turnYellow();
+  }
+  
+  
+
+
+}
+
+
+/* From here down, you are not expected to 
+   understand.... for now :)  
+   
+   
+   Nothing to see here!
+   
+*/
+
+
+function turnOffLights() {
+  $('.traffic-light').removeClass('yellow-on red-on green-on');
+}
+
+function turnGreen() {
+  turnOffLights();
+  $('.green-light').addClass('green-on');
+}
+
+function turnYellow() {
+  turnOffLights();
+  $('.yellow-light').addClass('yellow-on');
+}
+
+function turnRed() {
+  turnOffLights();
+  $('.red-light').addClass('red-on');
+}
+
+function getActiveLight() {
+  return (['red', 'green', 'yellow'])[Math.floor(Math.random() * 3)];
+}
+
+function handleClicks() {
+  $('.js-control-lights').click(function() {
+    doTrafficLights();
+  });
+}
+
+$(function() {
+  handleClicks();
+})</script></body>
+</html>

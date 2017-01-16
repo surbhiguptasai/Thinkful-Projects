@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+* {
+  box-sizing: border-box;
+}
+
+main {
+  padding: 50px 20px;
+}
+
+.error-report {
+  color: red;
+}
+</style>
+</head>
+<body>
+  <main>
+    <h1>Handling errors</h1>
+    <p class="error-report js-error-report"></p>
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  </main>
+<script id="jsbin-javascript">
+function main() {
+ try{
+  doAllTheThings();
+ }
+  catch(e){
+    console.error(e);
+    reportError(e);
+    }
+}
+
+function doAllTheThings() {
+  throw {
+    message: "Everything's ruined",
+    name: "FatalException",
+    toString: function(){return this.name + ": " + this.message;} 
+  }
+}
+
+function reportError(e) {
+  $('.js-error-report').text("Uh oh, something went wrong! Here's what we know: " + e.message);
+}
+
+
+
+/* From here down, you are not expected to 
+   understand.... for now :)  
+   
+   
+   Nothing to see here!
+   
+*/
+
+
+$(main);
+</script>
+
+
+<script id="jsbin-source-css" type="text/css">* {
+  box-sizing: border-box;
+}
+
+main {
+  padding: 50px 20px;
+}
+
+.error-report {
+  color: red;
+}
+</script>
+
+<script id="jsbin-source-javascript" type="text/javascript">function main() {
+ try{
+  doAllTheThings();
+ }
+  catch(e){
+    console.error(e);
+    reportError(e);
+    }
+}
+
+function doAllTheThings() {
+  throw {
+    message: "Everything's ruined",
+    name: "FatalException",
+    toString: function(){return this.name + ": " + this.message;} 
+  }
+}
+
+function reportError(e) {
+  $('.js-error-report').text("Uh oh, something went wrong! Here's what we know: " + e.message);
+}
+
+
+
+/* From here down, you are not expected to 
+   understand.... for now :)  
+   
+   
+   Nothing to see here!
+   
+*/
+
+
+$(main);</script></body>
+</html>
