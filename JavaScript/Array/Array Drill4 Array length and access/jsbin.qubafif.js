@@ -1,12 +1,12 @@
-
-function accessFirstItem(array) {
-  return array[0];
+//`.length` is a property, not a method, so you don't include parentheses.
+function findLength(array) {
+  return array.length;
 }
 
-function accessThirdItem(array) {
-  return array[2];
+//Remember, indexes start at 0, so you have to subtract 1 from the length
+function accessLastItem(array) {
+  return array[array.length-1];
 }
-
 
 
 
@@ -29,7 +29,7 @@ function testFunctionWorks(fn, input, expected) {
     return true;
   }
   else {
-    console.log(
+    console.error(
       'FAILURE: `' + fn.name + '([' + input + '])` should be ' + expected +
       ' but was ' + fn(input)
     );
@@ -37,16 +37,16 @@ function testFunctionWorks(fn, input, expected) {
   }
 }
 
-
 function runTests() {
   
-  var list = [1, 4, 9, 16, 25]
-  var item1 = 1
-  var item2 = 9
+  var list = [1, 4, 9, 16, 25];
+  var originalList = [1, 4, 9, 16, 25];
+  var length = 5;
+  var lastItem = 25;
   
   var testResults = [
-    testFunctionWorks(accessFirstItem, list, item1),
-    testFunctionWorks(accessThirdItem, list, item2),
+    testFunctionWorks(findLength, list, length),
+    testFunctionWorks(accessLastItem, list, lastItem),
   ];
   
   

@@ -1,5 +1,6 @@
 function addToList(list, item) {
-  // your code goes here
+  list.push(item)
+  return list
 }
 
 

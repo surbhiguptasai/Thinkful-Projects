@@ -1,6 +1,10 @@
+
 function makeList(item1, item2, item3) {
-  // your code here
+  var listItems=[item1, item2, item3];
+
+  return listItems;
 }
+
 
 
 
