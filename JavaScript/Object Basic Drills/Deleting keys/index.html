@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<script id="jsbin-javascript">
+function keyDeleter(obj) {
+   
+var sampleObj = {
+  foo: 'foo',
+  bar: 'bar',
+  bizz: 'bizz',
+  bang: 'bang'
+};
+  delete obj.foo;
+  delete obj.bar;
+  return obj;
+}
+
+
+
+
+/* From here down, you are not expected to 
+   understand.... for now :)  
+   
+   
+   Nothing to see here!
+   
+*/
+
+(function testKeyDeleter() {
+  var obj = keyDeleter({
+    foo: 'foo',
+    bar: 'bar',
+    bizz: 'bizz',
+    bang: 'bang'
+  });
+  
+  if (typeof obj !== 'object') {
+    console.error('ERROR: `keyDeleter` must be return an object');
+    return false
+  }
+  ['foo', 'bar'].forEach(function(key) {
+    if (key in obj) {
+      console.error('`keyDeleter` did not delete the key for ' + key);
+      return false;
+    }
+  });
+  ['bizz', 'bang'].forEach(function(key) {
+    if (!(key in obj && obj[key] === key)) {
+      console.error('`keyDeleter` is deleting keys other than `foo` and `bar`');
+      return false;
+    }
+  });
+  console.log('SUCCESS: `updateObject` works correctly!');
+  
+})();
+</script>
+
+
+
+<script id="jsbin-source-javascript" type="text/javascript">function keyDeleter(obj) {
+   
+var sampleObj = {
+  foo: 'foo',
+  bar: 'bar',
+  bizz: 'bizz',
+  bang: 'bang'
+};
+  delete obj.foo;
+  delete obj.bar;
+  return obj;
+}
+
+
+
+
+/* From here down, you are not expected to 
+   understand.... for now :)  
+   
+   
+   Nothing to see here!
+   
+*/
+
+(function testKeyDeleter() {
+  var obj = keyDeleter({
+    foo: 'foo',
+    bar: 'bar',
+    bizz: 'bizz',
+    bang: 'bang'
+  });
+  
+  if (typeof obj !== 'object') {
+    console.error('ERROR: `keyDeleter` must be return an object');
+    return false
+  }
+  ['foo', 'bar'].forEach(function(key) {
+    if (key in obj) {
+      console.error('`keyDeleter` did not delete the key for ' + key);
+      return false;
+    }
+  });
+  ['bizz', 'bang'].forEach(function(key) {
+    if (!(key in obj && obj[key] === key)) {
+      console.error('`keyDeleter` is deleting keys other than `foo` and `bar`');
+      return false;
+    }
+  });
+  console.log('SUCCESS: `updateObject` works correctly!');
+  
+})();</script></body>
+</html>
