@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.hidden {
+  display:all;
+}
+</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <h1 class="js-hide-it">Hello from original HTML</h1>
+  <p class="js-hello-world"></p>
+  <ul>
+    <li class="js-hello-world"></li>
+  </ul>
+  
+  <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+  <!--  normally you'd link to your app.js here, below jquery 
+        but since this is a JSBIN you don't do that
+  --><script type="text/javascript">
+    function doHelloWorld() {
+  $('.js-hide-it').addClass('hidden');
+  $('.js-hello-world').text('hello world from JS');
+}
+
+doHelloWorld();
+  </script>
+</body>
+</html>

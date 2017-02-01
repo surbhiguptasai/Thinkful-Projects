@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  min-width: 250px;
+  padding: 30px;
+}
+
+.lightbulb {
+  border: 1px solid grey;
+  padding: 10px;
+  width: 25%;
+  float: left;
+  cursor: pointer;
+}
+
+.lightbulb img {
+  width: 100%;
+}
+
+.bulb-on {
+  background-color: yellow;
+}
+</style>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+<main>
+  <div>
+    <div class="lightbulb js-lightbulb">
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-65/lightbulb.svg" alt="Kiwi standing on oval">
+    </div>
+    <div class="lightbulb js-lightbulb">
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-65/lightbulb.svg" alt="Kiwi standing on oval">
+    </div>
+  </div>
+  <div class="lightbulb js-lightbulb">
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-65/lightbulb.svg" alt="Kiwi standing on oval">
+    </div>
+    <div class="lightbulb js-lightbulb">
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-65/lightbulb.svg" alt="Kiwi standing on oval">
+    </div>
+  </div>
+</main>
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script type="text/javascript">
+  function lightBulb(){
+   $(".js-lightbulb").click(function(event) {
+    $(".js-lightbulb").removeClass("bulb-on");
+    $(this).addClass("bulb-on");
+  })
+};
+lightBulb();
+</script>
+</body>
+</html>

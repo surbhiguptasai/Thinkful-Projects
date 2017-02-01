@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+.hidden {
+  display: none;
+}
+
+.complete {
+  text-decoration: line-through;
+}
+li{
+  color: red;
+}
+.sugar{
+  color: black;
+}
+</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+  <div class='hidden js-parent-demo'>
+    <ul class='js-to-dos'>
+      <li class="js-complete">Buy milk</li>
+      <li>mail rent check</li>
+      <li>write great american novel</li>
+    </ul>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+  <script type="text/javascript">
+    function doIt() {
+  var toDos = $('.js-to-dos');
+  toDos.children('.js-complete').addClass('complete');
+  toDos.parent().removeClass('hidden');
+     $("ul").append("<li class='sugar'>Buy Sugar</li>"); 
+ 
+}
+
+doIt();
+  </script>
+</body>
+</html>

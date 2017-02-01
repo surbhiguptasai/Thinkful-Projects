@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+  button {
+  font-size: 20px;
+  padding: 10px;
+}
+
+button:hover, li:hover {
+  cursor: pointer;  
+}
+
+ul {
+  width: 300px;
+  list-style: none;
+  padding-left: 20px;
+}
+
+li {
+  color: white;
+  text-align: center;
+  font-size: 26px;
+  background-color: blue;
+  padding: 20px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.original {
+  background-color: green;
+}
+</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <button>Make a pet!</button>
+  <p>Click an animal to remove it.</p>
+  <ul>
+    <li class="original">tiger</li>  
+    <li class="original">lion</li>
+    <li class="original">bear</li>
+  </ul>
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <script type="text/javascript">
+    $(function() {
+  
+  $("button").click(function(event) {
+    $("ul").append(
+      "<li>" +
+      ["cat", "dog", "rock"][Math.floor(Math.random()*3)] + "</li>"
+    );
+  });
+  
+  $('li').click(function(event) {
+    this.remove();
+  });
+  $('ul').on('click', 'li', function(event) {
+  this.remove();
+});
+});
+  </script>
+</body>
+</html>

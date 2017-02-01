@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+  * {
+  box-sizing: border-box;
+}
+
+main {
+  padding: 30px;
+  min-width: 250px;
+}
+
+.hero {
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.hero img {
+  height: 100%
+}
+
+
+.thumbnail {
+  display: inline-block;
+  cursor: pointer;
+  height: 60px;
+}
+
+a.thumbnail:hover {
+  box-shadow: 5px 5px 5px gray;
+}
+
+.thumbnail img {
+  max-height: 100%;
+}
+</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+<main>
+  <h1>Image Carousel</h1>
+  <div class="hero">
+    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-65/cat1.jpg" alt="" />
+  </div>
+  <div class="thumbnails">
+    <a class="thumbnail"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-65/cat1.jpg" alt="" /></a>
+    <a class="thumbnail"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-65/cat2.jpg" alt="" /></a>
+    <a class="thumbnail"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-65/cat3.jpg" alt="" /></a>
+    <a class="thumbnail"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-65/cat4.jpg" alt="" /></a>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <script type="text/javascript">
+  function imagesEnlarge(){
+    $('.thumbnail').click(function(){
+     var largeImage=$(this).find("img").attr("src");
+     $('.hero img').attr('src', largeImage);
+    })
+  };
+  imagesEnlarge();
+  </script>
+</main>
+</body>
+</html>
