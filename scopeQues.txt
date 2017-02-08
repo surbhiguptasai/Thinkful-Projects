@@ -1,0 +1,75 @@
+ Q-1 What is scope? Your explanation should include the idea of global vs. local scope.
+Scope--
+Scopes are the set of variables,objects and functions which we have to access.
+“scope” is that it’s where certain functions or variables are accessible from in our code, & the context in which they exist & 
+are executed in.
+
+Local Variables--
+Variables declared within a JavaScript function, become LOCAL to the function.
+Local variables have local scope: They can only be accessed within the function.
+Local variables are deleted when the function is completed.
+
+Global JavaScript Variables
+A variable declared outside a function, becomes GLOBAL.
+A global variable has global scope: All scripts and functions on a web page can access it.
+Do NOT create global variables unless you intend to.
+Global variables are deleted when you close the page.
+If a variable or function is global, it can be got at from anywhere. In a browser, the global scope is the window object. 
+
+
+
+Q-2 Why are global variables avoided?
+Non-locality -- Source code is easiest to understand when the scope of its individual elements are limited. 
+Global variables can be read or modified by any part of the program, making it difficult to remember or reason 
+about every possible use.
+No Access Control or Constraint Checking -- A global variable can be get or set by any part of the program, 
+and any rules regarding its use can be easily broken or forgotten. (In other words, get/set accessors are generally 
+preferable over direct data access, and this is even more so for global data.) By extension, the lack of access control
+greatly hinders achieving security in situations where you may wish to run untrusted code (such as working with 3rd party plugins).
+Implicit coupling -- A program with many global variables often has tight couplings between some of those variables, and 
+couplings between variables and functions. Grouping coupled items into cohesive units usually leads to better programs.
+Concurrency issues -- if globals can be accessed by multiple threads of execution, synchronization is necessary 
+(and too-often neglected). When dynamically linking modules with globals, the composed system might not be thread-safe 
+even if the two independent modules tested in dozens of different contexts were safe.
+Namespace pollution -- Global names are available everywhere. You may unknowingly end up using a global when you 
+think you are using a local (by misspelling or forgetting to declare the local) or vice versa. Also, if you ever have to
+link together modules that have the same global variable names, if you are lucky, you will get linking errors. If you are unlucky,
+the linker will simply treat all uses of the same name as the same object.
+Memory allocation issues -- Some environments have memory allocation schemes that make allocation of globals tricky. 
+This is especially true in languages where "constructors" have side-effects other than allocation (because, in that case, 
+you can express unsafe situations where two globals mutually depend on one another). Also, when dynamically linking modules, 
+it can be unclear whether different libraries have their own instances of globals or whether the globals are shared.
+Testing and Confinement - source that utilizes globals is somewhat more difficult to test because one cannot readily
+set up a 'clean' environment between runs. More generally, source that utilizes global services of any sort
+(e.g. reading and writing files or databases) that aren't explicitly provided to that source is difficult to test 
+for the same reason. For communicating systems, the ability to test system invariants may require running more 
+than one 'copy' of a system simultaneously, which is greatly hindered by any use of shared services -
+including global memory - that are not provided for sharing as part of the test.
+
+Q-3 Explain JavaScript's strict mode?
+Strict mode is a subset of the language that excludes deprecated features. The strict mode is opt-in and not required, meaning that if you want your code to run in the strict mode, you declare your intention using (once per function, or once for the whole program) the following string:
+"use strict";
+Its main purpose is to do more checking.
+Just add "use strict"; at the top of your code, before anything else.
+Strict mode makes several changes to normal JavaScript semantics.
+strict mode eliminates some JavaScript silent errors by changing them to throw errors.
+strict mode fixes mistakes that make it difficult for JavaScript engines to perform optimizations.
+strict mode prohibits some syntax likely to be defined in future versions of ECMAScript.
+
+Q-4 What are side effects, and what is a pure function?
+Pure Function--
+A pure function is a function which:
+Given the same input, will always return the same output.
+Produces no side effects.
+Relies on no external mutable state.
+Pure functions have many beneficial properties, and form the foundation of functional programming. Pure functions are completely independent of outside state, and as such, they are immune to entire classes of bugs that have to do with shared mutable state. Their independent nature also makes them great candidates for parallel processing across many CPUs, and across entire distributed computing clusters, which makes them essential for many types of scientific and resource-intensive computing tasks.
+Pure functions are also extremely independent?—?easy to move around, refactor, and reorganize in your code, making your programs more flexible and adaptable to future changes.
+Q-5 Explain variable hoisting in JavaScript?
+
+Hoisting is the mechanism of moving the variables and functions declaration to the top of the function scope (or global scope if outside any function).
+
+Hoisting influences the variable life-cycle, which consists of these 3 steps:
+Declaration - create a new variable. E.g. var myValue
+Initialization - initialize the variable with a value. E.g. myValue = 150
+Usage - access and use the variable value. E.g. alert(myValue)
+The process usually goes this way: first a variable should be declared, then initialized with a value and finally used. 
