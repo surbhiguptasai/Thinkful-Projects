@@ -1,3 +1,6 @@
+*{
+	box-sizing: content-box;
+}
 header{
 	text-align: center;
 	font-size: 20px;

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	main {
+  padding: 30px;
+}
+
+blockquote {
+  max-width: 300px;
+}
+
+blockquote + .author {
+  margin-bottom: 60px;
+}
+
+.author {
+  color: blue;
+}
+.author::before{
+  content:"-";
+  margin-right:5px;
+}
+blockquote::before{
+   content: "“";
+}
+blockquote::after{
+  content: "”";
+}
+
+
+
+</style>
+	<title></title>
+</head>
+<body>
+<main>
+  <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident nihil repellendus obcaecati vero ab neque saepe eligendi dolorum sit eos quibusdam labore ullam animi sapiente quia itaque velit sed, asperiores?</blockquote>
+<p class='author'>Boaty McBoatface</p>
+  
+  <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A possimus totam voluptatem, explicabo fugiat dolor, earum est eveniet repellat quo, voluptate eum similique. Iste harum ipsam iusto officia. Explicabo, et!</blockquote>
+  <p class='author'>Foo Manchu Bar</p>
+</main>
+</body>
+</html>
