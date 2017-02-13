@@ -26,10 +26,17 @@ function textAnalyze(){
     }
     $('.uwcount').append(outputArray.length);
 
-var totalLength = message.split("").length;
-  var averageLen= (totalLength / message.length).toFixed(2);
+var totalCharLength =  message.replace(/\s+/g, '').length;
+  var averageLen= (totalCharLength / countWords);
+alert("total char length is:"+totalCharLength);
+$('.avgWLen').append(averageLen);
 
-$('.avgWLen').append(averageLen.length);
+ var countSentence=message.split(".").length;
+ countSentence=countSentence-1;
+ alert("message"+countSentence);
+ var averageSenLen= (totalCharLength / countSentence);
+      $('.wSen').append(averageSenLen);
+
 
     })
  
