@@ -4,14 +4,27 @@
 <link rel="stylesheet" type="text/css" href="styles/signup-page.css">
 	<title>Sign-Up</title>
 </head>
-<body>
-  <div class="imgcontainer">
+<body class='signup'>
     <img src="Images/logo.png" class="logo" >
-  </div>
 
-	<form class='signup-form' action="/signup/" method='post'>
-	<h2>Sign-Up</h2>
-    <div class="container">
+	<form class='vertical-form signup-form' action="/signup/" method='post'>
+	<!-- <input name="utf8" type="hidden" value="&#x2713;" />
+<input type="hidden" name="authenticity_token" ><input type="hidden" name="i" id="i" /> -->
+  <legend>
+Sign-Up
+</legend>
+<label><b>Email</b></label>
+<br>
+<input type="email" placeholder="foo@bar.com" label="false" spellcheck="false" value="" name="user[email]" id="user_email" />
+<br>
+    <label><b>Password</b></label>
+     <br>
+<input placeholder="Enter Password" label="false" autocomplete="off" type="password" name="user[password]" id="user_password" />
+<input type="submit" name="commit" value="Sign up" />
+<p><a href="/forgot_password/new">Forgot password?</a></p>
+</form>
+
+    <!-- <div class="container">
 
     <label><b>Email</b></label>
      <br>
@@ -20,19 +33,21 @@
     <label><b>Password</b></label>
      <br>
     <input type="password" placeholder="Enter Password" name="psw" required>
-        
     <button type="submit">Sign up</button>
-   
   </div>
-
-  
-    
     <div  class="psw"> <a class="pwdcolor" href="/forgot-password/new">Forgot password?</a></div>
-  
-		
-	</form>
-	
-	
-	<div class="already-account"><p>Already have an account?<a href="">Log In</a></p></div>
+	</form> -->
+
+
+
+
+	<div class="already-account">
+  <p>
+  Already have an account?
+  <a href="logIn-page.html">Log In</a>
+
+  </p>
+  </div>
 </body>
 </html>
+

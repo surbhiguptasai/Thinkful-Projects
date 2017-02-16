@@ -1,52 +1,32 @@
-.signup {
+
+.login {
   background: #0069ff;
   font-family: "proxima-nova";
   padding: 0;
   margin: 0;
 }
 
-
-
-.signup * {
+.login * {
   box-sizing: border-box;
   font-family: "proxima-nova", helvetica;
 }
-.signup br.only-mobile {
+.login br.only-mobile {
   display: none;
 }
-.signup .logo {
+.login .logo {
   display: block;
   height: 75px;
   padding-top: 40px;
   margin: 0 auto 30px;
 }
-.logo {
-    display: block;
-    height: 35px;
-    width: auto;
-    margin: 0 auto 30px;
-}
-legend {
-    display: block;
-    -webkit-padding-start: 2px;
-    -webkit-padding-end: 2px;
-    border-width: initial;
-    border-style: none;
-    border-color: initial;
-    border-image: initial;
-}
-label {
-    cursor: default;
-}
-
-.signup .logo.registration-message {
+.login .logo.registration-message {
   margin-bottom: 0;
 }
-.signup a, .signup a:visited {
+.login a, .login a:visited {
   text-decoration: underline;
   color: inherit;
 }
-.signup ul.notice {
+.login ul.notice {
   margin: 0;
   border: 0;
   width: 100%;
@@ -57,18 +37,18 @@ label {
   font-size: 15px;
   padding: 10px;
 }
-.signup ul.notice.errors {
+.login ul.notice.errors {
   background-color: #EDE04D;
   color: #212200;
 }
-.signup ul.notice.success {
+.login ul.notice.success {
   background-color: #15CD72;
   color: white;
 }
-.signup ul.notice li {
+.login ul.notice li {
   padding: 5px 0;
 }
-.signup p.registration-message {
+.login p.registration-message {
   font-size: 22px;
   line-height: 28px;
   font-weight: 400;
@@ -76,15 +56,14 @@ label {
   color: white;
   margin: 15px 0 40px;
 }
-
-.signup .vertical-form {
+.login .vertical-form {
   margin: 0 auto;
-  width: 400px;
+  width: 470px;
   padding: 40px;
   border-radius: 3px;
   background: white;
 }
-.signup .vertical-form legend {
+.login .vertical-form legend {
   text-align: center;
   font-weight: 300;
   color: #444;
@@ -94,19 +73,19 @@ label {
   text-transform: none;
   letter-spacing: 0;
 }
-.signup .vertical-form legend:after {
+.login .vertical-form legend:after {
   display: none;
 }
-.signup .vertical-form ::-webkit-input-placeholder {
+.login .vertical-form ::-webkit-input-placeholder {
   color: #afafaf;
   font-size: 17px;
 }
-.signup .vertical-form input[type='text'], .signup .vertical-form input[type='email'], .signup .vertical-form input[type='password'], .signup .vertical-form input[type='number'], .signup .vertical-form input[type='submit'] {
+.login .vertical-form input[type='text'], .login .vertical-form input[type='email'], .login .vertical-form input[type='password'], .login .vertical-form input[type='number'], .login .vertical-form input[type='submit'] {
   background: #fcfcfc;
   border: 2px solid #e7e7e7;
   margin: 20px auto;
   padding: 15px;
-  width: 303px;
+  width: 100%;
   display: block;
   border-radius: 3px;
   font-size: 18px;
@@ -115,11 +94,11 @@ label {
   height: auto;
   -webkit-appearance: none;
 }
-.signup .vertical-form input[type='text']:focus, .signup .vertical-form input[type='email']:focus, .signup .vertical-form input[type='password']:focus, .signup .vertical-form input[type='number']:focus, .signup .vertical-form input[type='submit']:focus {
+.login .vertical-form input[type='text']:focus, .login .vertical-form input[type='email']:focus, .login .vertical-form input[type='password']:focus, .login .vertical-form input[type='number']:focus, .login .vertical-form input[type='submit']:focus {
   border-color: #E7E7E7;
   box-shadow: none;
 }
-.signup .vertical-form input[type='submit'] {
+.login .vertical-form input[type='submit'] {
   color: white;
   background: #15CD72;
   border: 0;
@@ -131,14 +110,14 @@ label {
   height: auto;
   -webkit-appearance: none;
 }
-.signup .vertical-form input:hover[type='submit'] {
+.login .vertical-form input:hover[type='submit'] {
   background-color: #0CB863;
   -webkit-transition: background 0.1s;
   -moz-transition: background 0.1s;
   -o-transition: background 0.1s;
   transition: background 0.1s;
 }
-.signup .vertical-form p {
+.login .vertical-form p {
   font-size: 17px;
   line-height: 1.5;
   text-align: center;
@@ -146,30 +125,39 @@ label {
   margin-top: 10px;
   color: #666;
 }
-.signup .vertical-form p a {
+.login .vertical-form p a {
   color: #0069ff;
   text-decoration: none;
 }
-.signup .vertical-form.signup-form{
+.login .vertical-form.sign-in{
   padding-bottom: 20px;
 }
-.signup .vertical-form.signup-form p{
+.login .vertical-form.sign-in p{
   padding-top: 8px;
 }
-.signup .vertical-form.tfa-form legend {
+.login .vertical-form.tfa-form legend {
   margin-bottom: 15px;
 }
-
-.signup .vertical-form.tfa-form + .already-account p {
+.login .vertical-form.tfa-form + .footer p {
   margin-bottom: 5px;
 }
-.signup .already-account {
+.login .footer {
   text-align: center;
   color: white;
   margin: 20px auto;
 }
-.signup .already-account a {
+.login .footer a {
   font-weight: 600;
   border: 0;
   padding: 0;
 }
+/*.login .footer a:hover {
+  color: #E7F1F9;
+}*/
+/*.login .footer p {
+  margin-bottom: 40px;
+}*/
+
+
+  
+
