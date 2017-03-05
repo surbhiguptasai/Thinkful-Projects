@@ -1,10 +1,23 @@
 function max(numbers) {
- // your code here
+var currentMax = numbers[0];
+  for (var i=0; i <= numbers.length; i++) {
+    if (numbers[i] > currentMax) {
+       currentMax = numbers[i];
+    }
+  }
+  return currentMax;
 }
 
 
+
 function min(numbers) {
- // your code here
+var currentMin = numbers[0];
+  for (var i=0; i <= numbers.length; i++) {
+    if (numbers[i] < currentMin) {
+       currentMin = numbers[i];
+    }
+  }
+  return currentMin;
 }
 
 

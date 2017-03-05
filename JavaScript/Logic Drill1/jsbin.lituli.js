@@ -11,10 +11,6 @@ function doTrafficLights() {
   else {
     turnYellow();
   }
-  
-  
-
-
 }
 
 
@@ -56,6 +52,4 @@ function handleClicks() {
   });
 }
 
-$(function() {
-  handleClicks();
-})
+$(handleClicks);
