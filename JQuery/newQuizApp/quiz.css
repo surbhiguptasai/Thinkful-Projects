@@ -1,0 +1,107 @@
+body {
+  font-family: helvetica, times, serif;
+  font-size: 14px;
+  margin: 100px;
+  display: block;
+  box-sizing: border-box;
+}
+body #wrapper {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: lightblue;
+  min-height: 450px;
+}
+body #wrapper h1 {
+  margin: 0;
+  padding: 15px;
+  text-align: center;
+}
+body #wrapper #myBtn {
+  color: white;
+  background: dodgerblue;
+  border: 3px solid white;
+  border-radius: 6px;
+  transition: .3s;
+  height: 40px;
+  width: 100%;
+  max-width: 270px;
+  font-size: 2em;
+  display: block;
+  text-align: center;
+  margin: 15px auto;
+  font-weight: bold;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+body #wrapper #myBtn #restartQ:hover {
+  background: white;
+  color: dodgerblue;
+  cursor: pointer;
+}
+body #wrapper label {
+  display: block;
+  font-size: 1.5em;
+  width: 25%;
+  font-weight: bold;
+  margin: 1em auto;
+}
+body #wrapper #quiz {
+  position: relative;
+}
+body #wrapper #quiz .total {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+#counter div{
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+.green{
+  color: green;
+  font-weight: bold;
+  font-size: 20px;
+}
+.red{
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+}
+.happyImage
+{
+  width:10%;
+  height:10%;
+}
+.sadImage
+{
+  width:10%;
+  height:10%;
+}
+.restartBtn{
+  color: white;
+  background: dodgerblue;
+  border: 3px solid white;
+  border-radius: 6px;
+  transition: .3s;
+  height: 40px;
+  width: 100%;
+  max-width: 270px;
+  font-size: 2em;
+  display: block;
+  text-align: center;
+  margin: 15px auto;
+  font-weight: bold;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
